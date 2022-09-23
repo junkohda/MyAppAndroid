@@ -56,7 +56,7 @@ fun CreateBizCard() {
             shape = RoundedCornerShape(corner = CornerSize(15.dp)),
             backgroundColor = Color.White,
             elevation = 4.dp) {
-            Column(modifier = Modifier.height(200.dp),
+            Column(modifier = Modifier.height(300.dp),
                     verticalArrangement = Arrangement.Top,
                     horizontalAlignment = Alignment.CenterHorizontally) {
                 CreateImageProfile()
@@ -115,7 +115,8 @@ fun Portfolio(data: List<String>) {
                     .padding(7.dp)) {
                     CreateImageProfile(modifier = Modifier.size(100.dp))
                     Column( modifier = Modifier
-                        .padding(7.dp)) {
+                        .padding(7.dp)
+                        .align(alignment = Alignment.CenterVertically)) {
 
                         Text(text = item, fontWeight = FontWeight.Bold)
                         Text(text = "A great Project", style = MaterialTheme.typography.body2)
@@ -154,7 +155,7 @@ private fun CreateInfo() {
 @Composable
 private fun CreateImageProfile(modifier: Modifier = Modifier) {
     Surface(
-        modifier = Modifier
+        modifier = modifier
             .size(150.dp)
             .padding(5.dp),
         shape = CircleShape,
@@ -163,7 +164,7 @@ private fun CreateImageProfile(modifier: Modifier = Modifier) {
         color = MaterialTheme.colors.onSurface.copy(alpha = 0.5f)
     ) {
         Image(
-            painter = painterResource(id = R.drawable.profile_img_cat),
+            painter = painterResource(id = R.drawable.profile_image),
             contentDescription = "profile image",
             modifier = modifier.size(135.dp),
             contentScale = ContentScale.Crop
