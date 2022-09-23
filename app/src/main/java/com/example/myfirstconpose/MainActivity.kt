@@ -164,7 +164,7 @@ private fun CreateImageProfile(modifier: Modifier = Modifier) {
         color = MaterialTheme.colors.onSurface.copy(alpha = 0.5f)
     ) {
         Image(
-            painter = painterResource(id = R.drawable.profile_image),
+            painter = painterResource(id = R.drawable.profile_img_cat),
             contentDescription = "profile image",
             modifier = modifier.size(135.dp),
             contentScale = ContentScale.Crop
